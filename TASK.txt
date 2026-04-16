@@ -1,35 +1,50 @@
-BUILD BEFORE BID STRATEGY — React/FastAPI SaaS Lead Gen Platform
+FULL PRODUCTION BUILD — React/FastAPI SaaS Lead Gen Platform
 
-GOAL: Build tangible code samples FIRST, then write proposal that showcases them.
+CRITICAL: This must be a complete, production-ready codebase that would pass QA testing. No samples, no placeholders, no TODO comments. Build it like you are delivering to a real client.
 
-STEP 1 — Build these 3 code samples:
+EXPECTED DELIVERABLES:
 
-1. REACT DASHBOARD COMPONENT (src/components/LeadDashboard.tsx)
-   - React + TypeScript functional component
-   - Shows lead list with status badges, search/filter
-   - Real-time Firebase listener setup
-   - AI assistant integration placeholder (Claude/OpenAI)
-   - Responsive Tailwind-ish styling
+1. NEXT.JS FRONTEND (frontend/)
+   - Complete Next.js 14 app with App Router
+   - Proper folder structure: app/, components/, lib/, hooks/, types/
+   - LeadDashboard with real Firebase Firestore integration
+   - Full CRUD UI for leads (create, read, update, delete)
+   - AI assistant panel with chat interface
+   - Auth pages (login, register) connected to Firebase Auth
+   - Responsive layout with proper loading/error states
+   - Environment variable config
+   - next.config.js, tsconfig.json, package.json with all deps
 
-2. FASTAPI BACKEND (api/leads.py)
-   - FastAPI router with CRUD for leads
-   - Pydantic models for lead data
-   - Firebase Firestore integration
-   - AI agent endpoint (OpenAI/Claude)
-   - RESTful design with proper error handling
+2. FASTAPI BACKEND (backend/)
+   - Complete FastAPI app with proper structure: main.py, routers/, models/, schemas/, services/
+   - Full CRUD for leads with proper Pydantic v2 schemas
+   - Firebase Admin SDK integration
+   - OpenAI API integration with proper error handling and retry logic
+   - Claude API integration
+   - Auth dependency injection (Firebase token verification)
+   - Proper CORS, rate limiting, logging
+   - Alembic migrations or SQLModel setup
+   - requirements.txt, Dockerfile, docker-compose.yml
 
-3. FIREBASE CONFIG (firebase/config.ts)
-   - Firebase init with Firestore
-   - Real-time subscription pattern
-   - Auth context setup
+3. FIREBASE (firebase/)
+   - firebase.json, .firebaserc
+   - firestore.rules, firestore.indexes.json
+   - Security rules for leads, users
+   - Storage rules if applicable
 
-STEP 2 — Write COVER_LETTER.txt that references the built code:
-   "I have already built a working dashboard component demonstrating...
-   I have already scaffolded the FastAPI backend with...
-   You can see my work at: [repo_path]"
+4. CI/CD
+   - GitHub Actions workflow: .github/workflows/ci.yml
+   - Run tests on push
+   - frontend/tests/, backend/tests/ — real test files
 
-STEP 3 — Write PROPOSAL.md
-   Same content as before but NOW referencing the built artifacts.
+5. README.md — full setup instructions, architecture diagram in markdown, env vars, how to run locally and deploy
 
-Check in every 4hrs: python3 /home/deploy/.hermes/scripts/job-checkin JOB-20260415163000-077882 <note>
-Done: python3 /home/deploy/.hermes/scripts/job-advance JOB-20260415163000-077882 DRAFT build
+6. COVER_LETTER.txt — references the REAL code in the repo
+
+7. PROPOSAL.md — full proposal with code sample links
+
+CHECK INSTRUCTIONS:
+- Check in every 4hrs: python3 /home/deploy/.hermes/scripts/job-checkin JOB-20260415163000-077882 <note>
+- Done: python3 /home/deploy/.hermes/scripts/job-advance JOB-20260415163000-077882 DRAFT build
+
+IMPORTANT: Write real, working code. No placeholders. No TODO. No 'example.com'. The code must be complete enough to actually run.
