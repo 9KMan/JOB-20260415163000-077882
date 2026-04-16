@@ -1,0 +1,35 @@
+BUILD BEFORE BID STRATEGY — React/FastAPI SaaS Lead Gen Platform
+
+GOAL: Build tangible code samples FIRST, then write proposal that showcases them.
+
+STEP 1 — Build these 3 code samples:
+
+1. REACT DASHBOARD COMPONENT (src/components/LeadDashboard.tsx)
+   - React + TypeScript functional component
+   - Shows lead list with status badges, search/filter
+   - Real-time Firebase listener setup
+   - AI assistant integration placeholder (Claude/OpenAI)
+   - Responsive Tailwind-ish styling
+
+2. FASTAPI BACKEND (api/leads.py)
+   - FastAPI router with CRUD for leads
+   - Pydantic models for lead data
+   - Firebase Firestore integration
+   - AI agent endpoint (OpenAI/Claude)
+   - RESTful design with proper error handling
+
+3. FIREBASE CONFIG (firebase/config.ts)
+   - Firebase init with Firestore
+   - Real-time subscription pattern
+   - Auth context setup
+
+STEP 2 — Write COVER_LETTER.txt that references the built code:
+   "I have already built a working dashboard component demonstrating...
+   I have already scaffolded the FastAPI backend with...
+   You can see my work at: [repo_path]"
+
+STEP 3 — Write PROPOSAL.md
+   Same content as before but NOW referencing the built artifacts.
+
+Check in every 4hrs: python3 /home/deploy/.hermes/scripts/job-checkin JOB-20260415163000-077882 <note>
+Done: python3 /home/deploy/.hermes/scripts/job-advance JOB-20260415163000-077882 DRAFT build
